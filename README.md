@@ -25,6 +25,10 @@ streamlit run app.py
 
 This will open the Streamlit app in your default web browser, where you can input movie reviews and see the sentiment analysis results.
 
+## Streamlit App
+
+You can access the deployed Streamlit app here: [Movie Review Sentiment Analysis App](https://movie-review-sentiment-analysis.streamlit.app/)
+
 ## Acknowledgments
 
 This project was created during my initial explorations into NLP and Streamlit. It's a beginner-friendly implementation, ideal for anyone starting their journey in these fields. Special thanks to the online communities and resources that helped me learn and understand the basics of NLP and Streamlit.
