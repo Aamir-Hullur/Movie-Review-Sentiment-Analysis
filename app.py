@@ -11,8 +11,10 @@ model1 = joblib.load(r"saved_models/MNB.pkl")  # MultinomialNB
 model2 = joblib.load(r"saved_models/SVC.pkl")  # LinearSVC
 tfidf = joblib.load(r"saved_models/tfidf.pkl")
 
-nltk.download('stopwords')
-nltk.download('wordnet')
+nltk_resources = ['stopwords','wordnet']
+
+for resource in nltk_resources:
+    nltk.download(resource)
 
 def cleaning_text(text):
     # Remove non-alphabetic characters and lowercase the text
@@ -22,8 +24,8 @@ def cleaning_text(text):
     stop_words = set(stopwords.words('english'))
     lemmatizer = WordNetLemmatizer()
     words = text.split()
-    # cleaned_text = [lemmatizer.lemmatize(word) for word in words if word not in stop_words]
-    cleaned_text = [wordnet.lemmatize(word) for word in words if word not in set(stop_words)]
+    cleaned_text = [lemmatizer.lemmatize(word) for word in words if word not in stop_words]
+    # cleaned_text = [wordnet.lemmatize(word) for word in words if word not in set(stop_words)]
 
     # Rejoin the cleaned words
     return " ".join(cleaned_text)
