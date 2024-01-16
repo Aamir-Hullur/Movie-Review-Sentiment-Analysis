@@ -6,9 +6,9 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 # Load your trained models and other necessary components
-model1 = joblib.load(r"saved_models\MNB.pkl")  # MultinomialNB
-model2 = joblib.load(r"saved_models\SVC.pkl")  # LinearSVC
-tfidf = joblib.load(r"saved_models\tfidf.pkl")
+model1 = joblib.load(r"saved_models/MNB.pkl")  # MultinomialNB
+model2 = joblib.load(r"saved_models/SVC.pkl")  # LinearSVC
+tfidf = joblib.load(r"saved_models/tfidf.pkl")
 
 def cleaning_text(text):
     # Remove non-alphabetic characters and lowercase the text
